@@ -1,21 +1,39 @@
-## Checkpoint
+# GOD (Go Direction) - Simulación de un Sistema Operativo
 
-Para cada checkpoint de control obligatorio, se debe crear un tag en el
-repositorio con el siguiente formato:
+Este proyecto fue desarrollado como trabajo práctico cuatrimestral para la materia **Sistemas Operativos** (UTN FRBA, 2° cuatrimestre 2024).
 
+El objetivo principal fue simular un sistema operativo distribuido compuesto por distintos módulos comunicados vía HTTP:
+
+- **Kernel**: planificación y gestión de procesos e hilos  
+- **Memoria**: asignación de memoria con particiones fijas/dinámicas  
+- ⚙**CPU**: ciclo de instrucción con registros, interrupciones y MMU  
+- **FileSystem**: sistema de archivos con asignación indexada y persistencia en disco
+
+El proyecto incluye soporte para planificación por FIFO, Prioridades y Colas Multinivel, manejo de mutex, syscalls, dump de memoria y testing distribuido.
+
+## Tecnologías utilizadas
+- Golang
+- APIs RESTful
+- Linux CLI
+- Git
+- Testing distribuido
+- Logs estructurados con `slog`
+
+## Estructura general del proyecto
 ```
-checkpoint-{número}
+/kernel
+/memoria
+/cpu
+/filesystem
+/scripts
 ```
 
-Donde `{número}` es el número del checkpoint.
+## Cómo ejecutar
+1. Configurar los archivos `.config` en cada módulo.
+2. Ejecutar los módulos con `go run` o `make`.
+3. Usar los scripts de prueba para simular ejecuciones distribuidas.
 
-Para crear un tag y subirlo al repositorio, podemos utilizar los siguientes
-comandos:
+> Implementado y probado en entorno Linux. Compatible con múltiples computadoras.
 
-```bash
-git tag -a checkpoint-{número} -m "Checkpoint {número}"
-git push origin checkpoint-{número}
-```
-
-Asegúrense de que el código compila y cumple con los requisitos del checkpoint
-antes de subir el tag.
+## Créditos
+Trabajo realizado por equipo de estudiantes de UTN FRBA como parte del TP final de la materia Sistemas Operativos (2C2024).
