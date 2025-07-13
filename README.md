@@ -6,7 +6,7 @@ El objetivo principal fue simular un sistema operativo distribuido compuesto por
 
 - **Kernel**: planificación y gestión de procesos e hilos  
 - **Memoria**: asignación de memoria con particiones fijas/dinámicas  
-- ⚙**CPU**: ciclo de instrucción con registros, interrupciones y MMU  
+- **CPU**: ciclo de instrucción con registros, interrupciones y MMU  
 - **FileSystem**: sistema de archivos con asignación indexada y persistencia en disco
 
 El proyecto incluye soporte para planificación por FIFO, Prioridades y Colas Multinivel, manejo de mutex, syscalls, dump de memoria y testing distribuido.
